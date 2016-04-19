@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en-au">
+<head>
+    <title>Programming &middot; humpty.xyz</title>
+    <meta name="generator" content="Hugo 0.15" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Humphrey Murray">
+    
+      <meta name="description" content="A collection of thoughts, nerdy projects, and useful things.">
+    
+    
+      <link href="http://humpty.xyz/tags/programming/index.xml" rel="alternate" type="application/rss+xml" title="humpty.xyz" />
+      <link href="http://humpty.xyz/tags/programming/index.xml" rel="feed" type="application/rss+xml" title="humpty.xyz" />
+    
+    <link rel="icon" href="http://humpty.xyz/favicon.ico">
+    <link rel="apple-touch-icon" href="http://humpty.xyz/apple-touch-icon.png" />
+    <link rel="stylesheet" href="http://humpty.xyz/css/style.css">
+    <link rel="stylesheet" href="http://humpty.xyz/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://humpty.xyz/css/monokai.css">
+    <link rel="stylesheet" href="http://humpty.xyz/fancybox/jquery.fancybox.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <meta property="og:title" content="Programming" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://humpty.xyz/tags/programming/" />
+
+
+<meta property="og:updated_time" content="2016-04-19T15:10:02&#43;10:00"/>
+
+
+
+
+
+
+
+
+
+    
+    
+<meta itemprop="name" content="Programming">
+<meta itemprop="description" content="">
+
+
+    
+    <link rel="stylesheet" href="http://humpty.xyz/css/humpty_custom.css">
+<link rel="apple-touch-icon" sizes="57x57" href="http://humpty.xyz/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="http://humpty.xyz/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="http://humpty.xyz/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="http://humpty.xyz/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="http://humpty.xyz/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="http://humpty.xyz/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="http://humpty.xyz/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="http://humpty.xyz/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="http://humpty.xyz/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="http://humpty.xyz/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://humpty.xyz/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="http://humpty.xyz/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://humpty.xyz/favicon/favicon-16x16.png">
+<link rel="manifest" href="http://humpty.xyz/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="http://humpty.xyz/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+    
+</head>
+<body>
+<div class="container">
+
+
+<div id="container">
+    <header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      <a href="http://humpty.xyz/" id="logo"><i class="logo" style="background-image: url('http://humpty.xyz/css/images/logo.png')"></i><span class="site-title">humpty.xyz</span></a>
+      <nav id="main-nav">
+          
+          
+          <a class="main-nav-link" href="http://humpty.xyz/">Home</a>
+          
+          
+          
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+          <a class="main-nav-link" href="http://humpty.xyz/tags/">Tags</a>
+          
+          
+          
+          <a class="main-nav-link" href="http://humpty.xyz/categories/">Categories</a>
+          
+          
+      </nav>
+        <nav id="sub-nav">
+          <div class="profile" id="profile-nav">
+            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="http://humpty.xyz/css/images/avatar.png"><i class="fa fa-caret-down"></i></a>
+          </div>
+        </nav>
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+              <input type="search" name="q" results="0" class="search-form-input" placeholder="Search">
+              <button type="submit" class="search-form-submit">
+              </button>
+              <input type="hidden" name="q" value="site:http://humpty.xyz/">
+         </form>
+        </div>
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tbody>
+          <tr>
+          
+          
+          <td><a class="main-nav-link" href="http://humpty.xyz/">Home</a></td>
+          
+          
+          
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+          <td><a class="main-nav-link" href="http://humpty.xyz/tags/">Tags</a></td>
+          
+          
+          
+          <td><a class="main-nav-link" href="http://humpty.xyz/categories/">Categories</a></td>
+          
+          
+          <td>
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+          <input type="search" name="q" results="0" class="search-form-input" placeholder="Search">
+          <input type="hidden" name="q" value="site:http://humpty.xyz/">
+          </form>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</header>
+
+    <div class="outer">
+        <aside id="profile">
+  <div class="inner profile-inner">
+    <div class="base-info profile-block">
+      <img id="avatar" src="http://humpty.xyz/css/images/avatar.png">
+      <h2 id="name">Humphrey Murray</h2>
+      <h3 id="title">Nerd - Programmer - Hiker - Believer</h3>
+      <span id="location"><i class="fa fa-map-marker"></i>Tasmania, Australia</span>
+      
+          <a id="follow" href="https://github.com/humphrey">
+              Follow
+          </a>
+      
+    </div>
+    <div class="article-info profile-block">
+      <div class="article-info-block">
+        1
+        <span>Posts</span>
+      </div>
+      <div class="article-info-block">
+        
+          2
+          
+        <span>
+            Tags
+        </span>
+      </div>
+    </div>
+    <div class="contact-info profile-block">
+      <table class="contact-list">
+        <tr>
+          
+<td><a href="//github.com/humphrey" target="_blank" title="GitHub"><i class="fa fa-github"></i></a></td>
+
+
+
+<td><a href="//bitbucket.com/humphrey" target="_blank" title="Bitbucket"><i class="fa fa-bitbucket"></i></a></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<td><a href="//facebook.com/humphrey.murray" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></td>
+
+
+
+<td><a href="//twitter.com/humphreymurray" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></td>
+
+
+          <td><a href="http://humpty.xyz/tags/programming/index.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</aside>
+
+        <section id="main">
+            <section class="archives-wrap">
+                <div class="archive-category-wrap">
+                    <span class="archive-category">Programming</span>
+                </div>
+                <div class="archives">
+                    
+                    
+                        <article class="archive-article archive-type-post">
+    <div class="archive-article-inner">
+        <div class="archive-article-thumbnail">
+            
+            <a href="http://humpty.xyz/static-generated-website-with-hugo-s3-route53" class="thumbnail">
+                
+                <span style="background-image:url(http://humpty.xyz/post/2016/static-generated-website-with-hugo-s3-route53/hugo-website.jpg)" alt="Static generated website with Hugo, S3, Route53" class="thumbnail-image"></span>
+                
+            </a>
+            
+        </div>
+        <header class="archive-article-header">
+            <h1 itemprop="name">
+            <a class="archive-article-title" href="http://humpty.xyz/static-generated-website-with-hugo-s3-route53">Static generated website with Hugo, S3, Route53</a>
+            </h1>
+            <div class="archive-article-date">
+                <i class="fa fa-calendar"></i>
+                <time datetime="2016-04-19 15:10:02 &#43;1000 AEST" itemprop="datePublished">2016-04-19</time>
+            </div>
+        </header>
+    </div>
+</article> 
+                    
+                </div>
+            </section>
+            <nav id="page-nav">
+
+</nav>
+
+        </section>
+        <aside id="sidebar">
+    
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Recents
+    </h3>
+    <div class="widget">
+        <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://humpty.xyz/static-generated-website-with-hugo-s3-route53" class="thumbnail">
+                    
+                        
+                        <span style="background-image:url(http://humpty.xyz/post/2016/static-generated-website-with-hugo-s3-route53/hugo-website.jpg)" alt="Programming" class="thumbnail-image"></span>
+                        
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    <p class="item-category">
+                        <a class="article-category-link" href="http://humpty.xyz/categories/programming">
+                        programming
+                        </a>
+                    </p>
+                    
+                    <p class="item-title"><a href="http://humpty.xyz/static-generated-website-with-hugo-s3-route53" class="title">Static generated website with Hugo, S3, Route53</a></p>
+                    <p class="item-date">
+                        <time datetime="2016-04-19 15:10:02 &#43;1000 AEST" itemprop="datePublished">2016-04-19</time>
+                    </p>
+                </div>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://humpty.xyz/categories/programming">
+                    programming
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Tags
+    </h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://humpty.xyz/tags/nerdy">
+                    nerdy
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://humpty.xyz/tags/programming">
+                    programming
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Tag cloud
+    </h3>
+    <div class="widget tagcloud">
+        
+        <a href="http://humpty.xyz/tags/nerdy" style="font-size: 12px;">nerdy</a>
+        
+        <a href="http://humpty.xyz/tags/programming" style="font-size: 12px;">programming</a>
+        
+    </div>
+</div>
+
+
+
+
+    <div id="toTop" class="fa fa-chevron-up"></div>
+</aside>
+
+    </div>
+</div>
+
+<footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016
+      Powered by <a href="//gohugo.io">Hugo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>.
+    </div>
+  </div>
+</footer>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="http://humpty.xyz/fancybox/jquery.fancybox.pack.js"></script>
+<script src="http://humpty.xyz/js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<!-- MathJax -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
+</html>

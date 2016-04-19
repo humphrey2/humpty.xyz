@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en-au">
+<head>
+    <title>Static generated website with Hugo, S3, Route53 &middot; humpty.xyz</title>
+    <meta name="generator" content="Hugo 0.15" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Humphrey Murray">
+    
+      <meta name="description" content="A collection of thoughts, nerdy projects, and useful things.">
+    
+    
+    <link rel="icon" href="http://humpty.xyz/favicon.ico">
+    <link rel="apple-touch-icon" href="http://humpty.xyz/apple-touch-icon.png" />
+    <link rel="stylesheet" href="http://humpty.xyz/css/style.css">
+    <link rel="stylesheet" href="http://humpty.xyz/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://humpty.xyz/css/monokai.css">
+    <link rel="stylesheet" href="http://humpty.xyz/fancybox/jquery.fancybox.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <meta property="og:title" content="Static generated website with Hugo, S3, Route53" />
+<meta property="og:description" content="So, I&rsquo;ve started a new website! It&rsquo;s been a while since I&rsquo;ve done something nerdy like this, but I thought that it would be a good excuse to try out static website generation. Hugo Static generator Most of my web site experience has been with Django, which is a dynamic, database driven backend for creating websites. I&rsquo;ve recently come across Hugo though. It allows you to do something similar to wordpress, but all the posts are stored in text files, rather than a database." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://humpty.xyz/static-generated-website-with-hugo-s3-route53" />
+
+
+<meta property="og:updated_time" content="2016-04-19T15:10:02&#43;10:00"/>
+
+
+
+
+
+
+
+
+
+
+    
+    
+<meta itemprop="name" content="Static generated website with Hugo, S3, Route53">
+<meta itemprop="description" content="So, I&rsquo;ve started a new website! It&rsquo;s been a while since I&rsquo;ve done something nerdy like this, but I thought that it would be a good excuse to try out static website generation. Hugo Static generator Most of my web site experience has been with Django, which is a dynamic, database driven backend for creating websites. I&rsquo;ve recently come across Hugo though. It allows you to do something similar to wordpress, but all the posts are stored in text files, rather than a database.">
+
+
+<meta itemprop="dateModified" content="2016-04-19T15:10:02&#43;10:00" />
+<meta itemprop="wordCount" content="300">
+
+
+
+<meta itemprop="keywords" content="programming,nerdy,programming," />
+
+    
+
+  <meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:title" content="Static generated website with Hugo, S3, Route53"/>
+<meta name="twitter:description" content="So, I&rsquo;ve started a new website! It&rsquo;s been a while since I&rsquo;ve done something nerdy like this, but I thought that it would be a good excuse to try out static website generation. Hugo Static generator Most of my web site experience has been with Django, which is a dynamic, database driven backend for creating websites. I&rsquo;ve recently come across Hugo though. It allows you to do something similar to wordpress, but all the posts are stored in text files, rather than a database."/>
+<meta name="twitter:site" content="@humphreymurray"/>
+
+
+    <link rel="stylesheet" href="http://humpty.xyz/css/humpty_custom.css">
+<link rel="apple-touch-icon" sizes="57x57" href="http://humpty.xyz/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="http://humpty.xyz/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="http://humpty.xyz/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="http://humpty.xyz/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="http://humpty.xyz/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="http://humpty.xyz/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="http://humpty.xyz/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="http://humpty.xyz/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="http://humpty.xyz/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="http://humpty.xyz/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://humpty.xyz/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="http://humpty.xyz/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://humpty.xyz/favicon/favicon-16x16.png">
+<link rel="manifest" href="http://humpty.xyz/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="http://humpty.xyz/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+    
+</head>
+<body>
+<div class="container">
+
+
+<div id="container">
+	<header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      <a href="http://humpty.xyz/" id="logo"><i class="logo" style="background-image: url('http://humpty.xyz/css/images/logo.png')"></i><span class="site-title">humpty.xyz</span></a>
+      <nav id="main-nav">
+          
+          
+          <a class="main-nav-link" href="http://humpty.xyz/">Home</a>
+          
+          
+          
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+          <a class="main-nav-link" href="http://humpty.xyz/tags/">Tags</a>
+          
+          
+          
+          <a class="main-nav-link" href="http://humpty.xyz/categories/">Categories</a>
+          
+          
+      </nav>
+        <nav id="sub-nav">
+          <div class="profile" id="profile-nav">
+            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="http://humpty.xyz/css/images/avatar.png"><i class="fa fa-caret-down"></i></a>
+          </div>
+        </nav>
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+              <input type="search" name="q" results="0" class="search-form-input" placeholder="Search">
+              <button type="submit" class="search-form-submit">
+              </button>
+              <input type="hidden" name="q" value="site:http://humpty.xyz/">
+         </form>
+        </div>
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tbody>
+          <tr>
+          
+          
+          <td><a class="main-nav-link" href="http://humpty.xyz/">Home</a></td>
+          
+          
+          
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+          <td><a class="main-nav-link" href="http://humpty.xyz/tags/">Tags</a></td>
+          
+          
+          
+          <td><a class="main-nav-link" href="http://humpty.xyz/categories/">Categories</a></td>
+          
+          
+          <td>
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+          <input type="search" name="q" results="0" class="search-form-input" placeholder="Search">
+          <input type="hidden" name="q" value="site:http://humpty.xyz/">
+          </form>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</header>
+
+   	
+   	<div class="outer">
+   		
+	    <aside id="profile">
+  <div class="inner profile-inner">
+    <div class="base-info profile-block">
+      <img id="avatar" src="http://humpty.xyz/css/images/avatar.png">
+      <h2 id="name">Humphrey Murray</h2>
+      <h3 id="title">Nerd - Programmer - Hiker - Believer</h3>
+      <span id="location"><i class="fa fa-map-marker"></i>Tasmania, Australia</span>
+      
+          <a id="follow" href="https://github.com/humphrey">
+              Follow
+          </a>
+      
+    </div>
+    <div class="article-info profile-block">
+      <div class="article-info-block">
+        1
+        <span>Posts</span>
+      </div>
+      <div class="article-info-block">
+        
+          2
+          
+        <span>
+            Tags
+        </span>
+      </div>
+    </div>
+    <div class="contact-info profile-block">
+      <table class="contact-list">
+        <tr>
+          
+<td><a href="//github.com/humphrey" target="_blank" title="GitHub"><i class="fa fa-github"></i></a></td>
+
+
+
+<td><a href="//bitbucket.com/humphrey" target="_blank" title="Bitbucket"><i class="fa fa-bitbucket"></i></a></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<td><a href="//facebook.com/humphrey.murray" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></td>
+
+
+
+<td><a href="//twitter.com/humphreymurray" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></td>
+
+
+          <td><a href="" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</aside>
+
+	    
+
+	    
+<section id="main">
+
+    <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
+        <div class="article-inner">
+            
+                
+                <img src="http://humpty.xyz/post/2016/static-generated-website-with-hugo-s3-route53/hugo-website.jpg" class="article-banner">
+                
+            
+
+            <header class="article-header">
+    <a href="http://humpty.xyz/static-generated-website-with-hugo-s3-route53">
+    <h1 class="article-title" itemprop="name">
+        Static generated website with Hugo, S3, Route53
+    </h1>
+    </a>
+    <div class="article-meta">
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2016-04-19 15:10:02 &#43;1000 AEST" itemprop="datePublished">2016-04-19</time>
+            &middot;
+            300
+            words
+            &middot;
+            2
+            minute read
+        </div>
+
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                <a class="article-category-link" href="http://humpty.xyz/categories/programming">programming</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                <a class="article-category-link" href="http://humpty.xyz/tags/programming">programming</a>
+                &middot;
+                
+                <a class="article-category-link" href="http://humpty.xyz/tags/nerdy">nerdy</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+            <div class="article-entry" itemprop="articleBody">
+                
+
+<p>So, I&rsquo;ve started a new website!  It&rsquo;s been a while since I&rsquo;ve done something nerdy like this, but I thought that it
+would be a good excuse to try out static website generation.</p>
+
+<h2 id="hugo-static-generator:baa668035c9e5aefe23598779d71a9c7">Hugo Static generator</h2>
+
+<p>Most of my web site experience has been with Django, which is a dynamic, database driven backend for creating websites.
+I&rsquo;ve recently come across <a href="http://gohugo.io/">Hugo</a> though.  It allows you to do something similar to wordpress, but all
+the posts are stored in text files, rather than a database.</p>
+
+<p>To publish a post, I just need to edit a file, compile, and upload the entire new site.  It&rsquo;s brilliant!</p>
+
+<h2 id="fast-cheap-hosting-on-amazon-s3:baa668035c9e5aefe23598779d71a9c7">Fast, Cheap, Hosting on Amazon S3</h2>
+
+<p>I&rsquo;m hosting this site using <a href="https://aws.amazon.com/s3/">Amazon S3</a> which provides very fast static file hosting for
+a very good price.  I&rsquo;m hosting it out of Sydney, Australia which will make it lightening fast for Australians, and a
+little bit slower for the rest of the world.  However, if I do start getting traffic from overseas, I can always use
+Amazon CloudFront to cache it all around the world.</p>
+
+<h2 id="so-what-am-i-going-to-write-about:baa668035c9e5aefe23598779d71a9c7">So, what am I going to write about?</h2>
+
+<p>This is a good question!  I&rsquo;m planning on using this blog/website as a place to write up about my nerdy activities.
+Hopefully, other nerds will find my projects helpful, and inspiring.  For example, I&rsquo;m currently installing a Nexus 7
+tablet into the dashboard of my car.  It&rsquo;s going to be awesome, and I&rsquo;m planning on writing a post about that.</p>
+
+<p>When it is finished, it should look something like this.</p>
+
+<div class="article-gallery">
+    <div class="article-gallery-photos">
+        
+        <a class="article-gallery-img fancybox" href="/post/2016/static-generated-website-with-hugo-s3-route53/tablet-dashboard-1.min.jpg" rel="group1">
+            <img src="http://humpty.xyz/post/2016/static-generated-website-with-hugo-s3-route53/tablet-dashboard-1.min.jpg" itemprop="image">
+        </a>
+        
+    </div>
+</div>
+
+
+<p>But I&rsquo;m waiting for some slim-fitting cables for audio and power before it will fit together.  So, it currently looks
+like this.</p>
+
+<p><div class="article-gallery">
+    <div class="article-gallery-photos">
+        
+        <a class="article-gallery-img fancybox" href="/post/2016/static-generated-website-with-hugo-s3-route53/tablet-dashboard-2.min.jpg" rel="group1">
+            <img src="http://humpty.xyz/post/2016/static-generated-website-with-hugo-s3-route53/tablet-dashboard-2.min.jpg" itemprop="image">
+        </a>
+        
+    </div>
+</div>
+</p>
+
+<p>So, this is my first post.  I&rsquo;m mostly just trying to get a post up, so that I can test my publishing scripts.</p>
+
+            </div>
+            <footer class="article-footer">
+    <a data-url="http://humpty.xyz/static-generated-website-with-hugo-s3-route53" data-id="baa668035c9e5aefe23598779d71a9c7" class="article-share-link">
+        Share
+    </a>
+    
+    <a href="http://humpty.xyz/static-generated-website-with-hugo-s3-route53/#disqus_thread" class="article-comment-link">
+        Comments
+    </a>
+    
+</footer>
+
+        </div>
+
+        
+
+    </article>
+
+    
+    <section id="comments">
+        <div id="disqus_thread">
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'humpty';
+    var disqus_identifier = 'http:\/\/humpty.xyz\/static-generated-website-with-hugo-s3-route53';
+    var disqus_title = 'Static generated website with Hugo, S3, Route53';
+    var disqus_url = 'http:\/\/humpty.xyz\/static-generated-website-with-hugo-s3-route53';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+    </section>
+    
+</section>
+
+
+	    
+	    <aside id="sidebar">
+    
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Recents
+    </h3>
+    <div class="widget">
+        <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="http://humpty.xyz/static-generated-website-with-hugo-s3-route53" class="thumbnail">
+                    
+                        
+                        <span style="background-image:url(http://humpty.xyz/post/2016/static-generated-website-with-hugo-s3-route53/hugo-website.jpg)" alt="Static generated website with Hugo, S3, Route53" class="thumbnail-image"></span>
+                        
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    <p class="item-category">
+                        <a class="article-category-link" href="http://humpty.xyz/categories/programming">
+                        programming
+                        </a>
+                    </p>
+                    
+                    <p class="item-title"><a href="http://humpty.xyz/static-generated-website-with-hugo-s3-route53" class="title">Static generated website with Hugo, S3, Route53</a></p>
+                    <p class="item-date">
+                        <time datetime="2016-04-19 15:10:02 &#43;1000 AEST" itemprop="datePublished">2016-04-19</time>
+                    </p>
+                </div>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://humpty.xyz/categories/programming">
+                    programming
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Tags
+    </h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://humpty.xyz/tags/nerdy">
+                    nerdy
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://humpty.xyz/tags/programming">
+                    programming
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Tag cloud
+    </h3>
+    <div class="widget tagcloud">
+        
+        <a href="http://humpty.xyz/tags/nerdy" style="font-size: 12px;">nerdy</a>
+        
+        <a href="http://humpty.xyz/tags/programming" style="font-size: 12px;">programming</a>
+        
+    </div>
+</div>
+
+
+
+
+    <div id="toTop" class="fa fa-chevron-up"></div>
+</aside>
+
+	    
+	</div>
+</div>
+
+<footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016
+      Powered by <a href="//gohugo.io">Hugo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>.
+    </div>
+  </div>
+</footer>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="http://humpty.xyz/fancybox/jquery.fancybox.pack.js"></script>
+<script src="http://humpty.xyz/js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<!-- MathJax -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
+</html>

@@ -2,7 +2,7 @@ baseurl = "http://humpty.xyz/"
 languageCode = "en-au"
 title = "humpty.xyz"
 # Enable comments by entering your Disqus shortname
-disqusShortname = "spf13"
+disqusShortname = "humpty"
 # Enable Google Analytics by entering your tracking code
 googleAnalytics = ""
 # Define the number of posts per page
@@ -12,7 +12,8 @@ theme = "hugo-icarus"
 
 
 [permalinks]
-    post = "/:year/:month/:day/:slug"
+    post = "/:slug"
+    #post = "/:year/:month/:day/:slug"
 
 
 [params]

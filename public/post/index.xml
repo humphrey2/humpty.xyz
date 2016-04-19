@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on humpty.xyz</title>
+    <link>http://humpty.xyz/post/</link>
+    <description>Recent content in Posts on humpty.xyz</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-au</language>
+    <lastBuildDate>Tue, 19 Apr 2016 15:10:02 +1000</lastBuildDate>
+    <atom:link href="http://humpty.xyz/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Static generated website with Hugo, S3, Route53</title>
+      <link>http://humpty.xyz/static-generated-website-with-hugo-s3-route53</link>
+      <pubDate>Tue, 19 Apr 2016 15:10:02 +1000</pubDate>
+      
+      <guid>http://humpty.xyz/static-generated-website-with-hugo-s3-route53</guid>
+      <description>
+
+&lt;p&gt;So, I&amp;rsquo;ve started a new website!  It&amp;rsquo;s been a while since I&amp;rsquo;ve done something nerdy like this, but I thought that it
+would be a good excuse to try out static website generation.&lt;/p&gt;
+
+&lt;h2 id=&#34;hugo-static-generator:baa668035c9e5aefe23598779d71a9c7&#34;&gt;Hugo Static generator&lt;/h2&gt;
+
+&lt;p&gt;Most of my web site experience has been with Django, which is a dynamic, database driven backend for creating websites.
+I&amp;rsquo;ve recently come across &lt;a href=&#34;http://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; though.  It allows you to do something similar to wordpress, but all
+the posts are stored in text files, rather than a database.&lt;/p&gt;
+
+&lt;p&gt;To publish a post, I just need to edit a file, compile, and upload the entire new site.  It&amp;rsquo;s brilliant!&lt;/p&gt;
+
+&lt;h2 id=&#34;fast-cheap-hosting-on-amazon-s3:baa668035c9e5aefe23598779d71a9c7&#34;&gt;Fast, Cheap, Hosting on Amazon S3&lt;/h2&gt;
+
+&lt;p&gt;I&amp;rsquo;m hosting this site using &lt;a href=&#34;https://aws.amazon.com/s3/&#34;&gt;Amazon S3&lt;/a&gt; which provides very fast static file hosting for
+a very good price.  I&amp;rsquo;m hosting it out of Sydney, Australia which will make it lightening fast for Australians, and a
+little bit slower for the rest of the world.  However, if I do start getting traffic from overseas, I can always use
+Amazon CloudFront to cache it all around the world.&lt;/p&gt;
+
+&lt;h2 id=&#34;so-what-am-i-going-to-write-about:baa668035c9e5aefe23598779d71a9c7&#34;&gt;So, what am I going to write about?&lt;/h2&gt;
+
+&lt;p&gt;This is a good question!  I&amp;rsquo;m planning on using this blog/website as a place to write up about my nerdy activities.
+Hopefully, other nerds will find my projects helpful, and inspiring.  For example, I&amp;rsquo;m currently installing a Nexus 7
+tablet into the dashboard of my car.  It&amp;rsquo;s going to be awesome, and I&amp;rsquo;m planning on writing a post about that.&lt;/p&gt;
+
+&lt;p&gt;When it is finished, it should look something like this.&lt;/p&gt;
+
+&lt;div class=&#34;article-gallery&#34;&gt;
+    &lt;div class=&#34;article-gallery-photos&#34;&gt;
+        
+        &lt;a class=&#34;article-gallery-img fancybox&#34; href=&#34;http://humpty.xyz/post/2016/static-generated-website-with-hugo-s3-route53/tablet-dashboard-1.min.jpg&#34; rel=&#34;group1&#34;&gt;
+            &lt;img src=&#34;http://humpty.xyz/post/2016/static-generated-website-with-hugo-s3-route53/tablet-dashboard-1.min.jpg&#34; itemprop=&#34;image&#34;&gt;
+        &lt;/a&gt;
+        
+    &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;But I&amp;rsquo;m waiting for some slim-fitting cables for audio and power before it will fit together.  So, it currently looks
+like this.&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;article-gallery&#34;&gt;
+    &lt;div class=&#34;article-gallery-photos&#34;&gt;
+        
+        &lt;a class=&#34;article-gallery-img fancybox&#34; href=&#34;http://humpty.xyz/post/2016/static-generated-website-with-hugo-s3-route53/tablet-dashboard-2.min.jpg&#34; rel=&#34;group1&#34;&gt;
+            &lt;img src=&#34;http://humpty.xyz/post/2016/static-generated-website-with-hugo-s3-route53/tablet-dashboard-2.min.jpg&#34; itemprop=&#34;image&#34;&gt;
+        &lt;/a&gt;
+        
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;So, this is my first post.  I&amp;rsquo;m mostly just trying to get a post up, so that I can test my publishing scripts.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
