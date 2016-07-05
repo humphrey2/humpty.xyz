@@ -6,8 +6,32 @@
     <description>Recent content in Posts on humpty.xyz</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-au</language>
-    <lastBuildDate>Tue, 19 Apr 2016 15:10:02 +1000</lastBuildDate>
+    <lastBuildDate>Tue, 05 Jul 2016 12:11:00 +0000</lastBuildDate>
     <atom:link href="http://humpty.xyz/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>A Great CMS for Your Hugo Static Generated Sites</title>
+      <link>http://humpty.xyz/a-great-cms-for-your-hugo-static-generated-sites</link>
+      <pubDate>Tue, 05 Jul 2016 12:11:00 +0000</pubDate>
+      
+      <guid>http://humpty.xyz/a-great-cms-for-your-hugo-static-generated-sites</guid>
+      <description>
+
+&lt;p&gt;I accidently came across &lt;strong&gt;Forestry.io&lt;/strong&gt; yesterday.  It&amp;rsquo;s a CMS for static generated sites.  It looks really smick, but the only way to find out what it&amp;rsquo;s like, is to publish a post with it.  So here we go!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://humpty.xyz/forestryio/images/forestry-io-homepage.png&#34; alt=&#34;forestry.io homepage&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;first-impressions&#34;&gt;First Impressions&lt;/h2&gt;
+
+&lt;p&gt;It&amp;rsquo;s really simple (which is a good thing)&amp;hellip; and I was easily able to connect it to my github and aws s3 accounts.&lt;/p&gt;
+
+&lt;h2 id=&#34;site-config-is-easily-editable&#34;&gt;Site config is easily editable&lt;/h2&gt;
+
+&lt;p&gt;But should it be?&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://humpty.xyz/forestryio/images/Screen Shot 2016-07-05 at 10.22.01 PM.png&#34; alt=&#34;Editing of config file&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Static generated website with Hugo, S3, Route53</title>
