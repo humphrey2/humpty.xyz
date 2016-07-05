@@ -1,14 +1,15 @@
 +++
 banner = "post/2016/static-generated-website-with-hugo-s3-route53/hugo-website.jpg"
 categories = ["programming"]
-date = "2016-04-19T15:10:02+10:00"
+date = "2016-04-19T15:10:00+00:00"
 description = ""
+draft = false
 images = []
-menu = ""
 tags = ["programming", "nerdy"]
 title = "Static generated website with Hugo, S3, Route53"
-+++
+[menu.]
 
++++
 So, I've started a new website!  It's been a while since I've done something nerdy like this, but I thought that it
 would be a good excuse to try out static website generation.
 
