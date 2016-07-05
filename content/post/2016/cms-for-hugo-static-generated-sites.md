@@ -10,3 +10,8 @@ I accidently came across **Forestry.io** yesterday.  It's a CMS for static gener
 
 ## First Impressions
 It's really simple (which is a good thing)... and I was easily able to connect it to my github and aws s3 accounts.
+
+## Site config is easily editable
+But should it be?
+
+![Editing of config file](/forestryio/images/Screen Shot 2016-07-05 at 10.22.01 PM.png)
