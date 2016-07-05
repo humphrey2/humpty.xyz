@@ -7,8 +7,6 @@ draft = false
 images = []
 tags = ["programming", "nerdy"]
 title = "Static generated website with Hugo, S3, Route53"
-[menu.]
-
 +++
 So, I've started a new website!  It's been a while since I've done something nerdy like this, but I thought that it
 would be a good excuse to try out static website generation.
